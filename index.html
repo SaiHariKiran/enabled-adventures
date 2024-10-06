@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enabled Adventures!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="home">
+        <header>
+            <h1>🌟 Welcome to Enabled Adventures 🌈</h1>
+            <p>Your adventure begins here! Choose a story and dive into a world of fun and imagination!</p>
+        </header>
+        
+        <div class="story-buttons">
+            <button onclick="startStory('lostKitten')">The Lost Kitten 🐱</button>
+            <button onclick="startStory('magicalGarden')">The Magical Garden 🌼</button>
+            <button onclick="startStory('braveRobot')">The Brave Little Robot 🤖</button>
+        </div>
+
+        <div class="images">
+            <img src="enabled.jpg" alt="Lost Kitten" width="400" height="400">
+        </div>
+
+        <footer>
+            <p>🎉 Enjoy learning and having fun! 🎉</p>
+            <p>Let's create beautiful memories together! 🌈</p>
+        </footer>
+    </div>
+    
+    <div id="story" class="hidden">
+        <p id="story-text"></p>
+        <button id="speak-button" onclick="speak(storyText.innerText)">🔊 Speak</button> <!-- Speaker Button -->
+        <button id="mute-button" onclick="toggleMute()">🔇 Mute</button>
+        <div id="choices"></div>
+        <button id="next-button" class="hidden" onclick="continueStory()">Next Adventure 🚀</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
